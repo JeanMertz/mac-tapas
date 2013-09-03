@@ -47,5 +47,5 @@ class Dotfiles
   end
 end
 
-current_path = File.expand_path(File.dirname(__FILE__))
+tapas_path = File.expand_path(File.join('~', '.tapas'))
 Dotfiles.new(current_path).install
