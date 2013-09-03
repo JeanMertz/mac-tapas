@@ -48,4 +48,4 @@ class Dotfiles
 end
 
 tapas_path = File.expand_path(File.join('~', '.tapas'))
-Dotfiles.new(current_path).install
+Dotfiles.new(tapas_path).install
