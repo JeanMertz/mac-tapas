@@ -64,7 +64,7 @@ unless system("(gem spec bundler -v '~> 1.3.0' > /dev/null 2>&1) || sudo gem ins
 end
 
 bundle_command = %w[sudo bundle install --binstubs=bin]
-bundle_command << options[:debug] ? '--verbose' : '--quiet'
+bundle_command << (options[:debug] ? '--verbose' : '--quiet')
 
 warn bundle_command.join(' ') if options[:debug]
 
