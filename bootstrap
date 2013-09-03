@@ -19,6 +19,10 @@ class Dotfiles
     end
   end
 
+  def call
+    `#{File.join(@path, 'tapas')} --debug`
+  end
+
   private
 
   def pre_install_check
@@ -47,4 +51,7 @@ class Dotfiles
 end
 
 tapas_path = File.expand_path(File.join('~', '.tapas'))
-Dotfiles.new(tapas_path).install
+
+dotfiles = Dotfiles.new(tapas_path)
+dotfiles.install
+dotfiles.call
