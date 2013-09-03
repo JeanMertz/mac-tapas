@@ -40,10 +40,9 @@ class Dotfiles
 
   def clone_repo
     `mkdir -p "#{@path}"`
-    Dir.chdir(@path)
 
     puts 'Serving Mac tapas...'
-    puts `git clone https://github.com/JeanMertz/mac-tapas.git .`
+    puts `git clone https://github.com/JeanMertz/mac-tapas.git #{@path}`
   end
 end
 
