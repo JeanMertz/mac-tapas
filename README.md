@@ -2,12 +2,12 @@
 
 note: veewee current only supports osx installations through VMWare
 Fusion. Virtualbox support [is in development]. Until then, both a [VMWare
-Fusion] installation ($50) and the [Vagrant vmware plugin] ($80) are
+Fusion] installation ($50) and the [Vagrant vmware] plugin ($80) are
 required.
 
 [is in development]: https://github.com/jedi4ever/veewee/pull/770
 [VMWare Fusion]: https://www.vmware.com/products/fusion
-[Vagrant vmware plugin]: http://www.vagrantup.com/vmware
+[Vagrant vmware]: http://www.vagrantup.com/vmware
 
 * [Download "OSX Moutain Lion"] from the Mac App Store
 * Install VMWare Fusion
