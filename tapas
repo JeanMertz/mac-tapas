@@ -131,7 +131,7 @@ end
 exit 0 unless options[:soloist]
 
 soloist_command = ['bin/soloist']
-ENV['LOG_LEVEL'] = if options[:debug] ? 'error' : 'debug'
+ENV['LOG_LEVEL'] = options[:debug] ? 'error' : 'debug'
 
 warn soloist_command.join(' ') if options[:debug]
 unless system *soloist_command
