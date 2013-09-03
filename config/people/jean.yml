@@ -1,0 +1,24 @@
+groups:
+    - fishermen
+recipes:
+    mac_os_x:
+        - applications::1password
+        - applications::bartender
+        - applications::dropbox
+        - osxdefaults::menu_add_battery_percentage
+        - dotfiles::projects
+attributes:
+    git:
+        name: Jean Mertz
+        email: jean@mertz.fm
+    osxdefaults:
+        computername: Jean-MacBook
+    dotfiles:
+        projects:
+            bundles:
+                - KunstmaanSentryBundle: git@github.com:Kunstmaan/KunstmaanSentryBundle.git
+            devops:
+                - kms: git@github.com:Kunstmaan/kms.git
+                - kstrano: git@github.com:Kunstmaan/kStrano.git
+        kdeploy:
+            hostname: sinope.dev

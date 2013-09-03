@@ -1,0 +1,51 @@
+#!/usr/bin/env ruby
+
+# With special thanks to:
+# => https://github.com/jm3/dotfiles
+
+class Dotfiles
+
+  def initialize(path)
+    @path = path
+  end
+
+  def install
+    pre_install_check
+
+    if File.directory?(File.join(@path, '.git'))
+      pull_repo
+    else
+      clone_repo
+    end
+  end
+
+  private
+
+  def pre_install_check
+    if git_missing?
+      puts 'Git not found. Exiting installation script.'
+      exit
+    end
+  end
+
+  def git_missing?
+    `which git`
+    ($?.to_i == 256) ? false : true
+  end
+
+  def pull_repo
+    Dir.cd(@path)
+    `git pull`
+  end
+
+  def clone_repo
+    `mkdir -p "#{@path}"`
+    Dir.cd(@path)
+
+    puts 'Serving Mac tapas...'
+    puts `git clone https://github.com/JeanMertz/mac-tapas.git .`
+  end
+end
+
+current_path = File.expand_path(File.dirname(__FILE__))
+Dotfiles.new(current_path).install
