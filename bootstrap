@@ -19,7 +19,7 @@ class Dotfiles
     end
   end
 
-  def call
+  def run
     `#{File.join(@path, 'tapas')} --debug`
   end
 
@@ -54,4 +54,4 @@ tapas_path = File.expand_path(File.join('~', '.tapas'))
 
 dotfiles = Dotfiles.new(tapas_path)
 dotfiles.install
-dotfiles.call
+dotfiles.run
