@@ -20,7 +20,7 @@ class Dotfiles
   end
 
   def run
-    `#{File.join(@path, 'tapas')} --debug`
+    puts `#{File.join(@path, 'tapas')} --debug`
   end
 
   private
