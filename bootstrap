@@ -22,13 +22,13 @@ class Dotfiles
   private
 
   def pre_install_check
-    if git_missing?
+    unless git_installed?
       puts 'Git not found. Exiting installation script.'
       exit
     end
   end
 
-  def git_missing?
+  def git_installed?
     `which git`
     ($?.to_i == 256) ? false : true
   end
