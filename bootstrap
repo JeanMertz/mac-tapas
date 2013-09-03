@@ -34,13 +34,13 @@ class Dotfiles
   end
 
   def pull_repo
-    Dir.cd(@path)
+    Dir.chdir(@path)
     `git pull`
   end
 
   def clone_repo
     `mkdir -p "#{@path}"`
-    Dir.cd(@path)
+    Dir.chdir(@path)
 
     puts 'Serving Mac tapas...'
     puts `git clone https://github.com/JeanMertz/mac-tapas.git .`
