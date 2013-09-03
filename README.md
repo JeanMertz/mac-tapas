@@ -25,6 +25,6 @@ the required gems:
 Next, define and build the osx template.
 
     $ bin/veewee fusion define osx-box osx
-    $ bin/veewee fusion build osx-vbox`
+    $ bin/veewee fusion build osx-vbox
 
 You can now ssh into the new machine using `ssh vagrant@ip.addr.ess`.
