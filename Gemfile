@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 gem 'chef', '0.8.10'
 gem 'soloist', :github => 'JeanMertz/soloist', :branch => 'berkshelf-integration'
